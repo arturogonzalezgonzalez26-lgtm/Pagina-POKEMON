@@ -1,0 +1,146 @@
+/* Colores de la página */
+:root {
+  --rojo: #d6362b;
+  --azul: #1b2a4a;
+  --azul-oscuro: #111b33;
+  --amarillo: #ffc93c;
+  --tarjeta: rgba(27, 42, 74, 0.88);
+}
+
+/* Estilo general */
+body {
+  font-family: "Fredoka", sans-serif;
+  color: #eaf0fb;
+  background: linear-gradient(rgba(17, 27, 51, 0.8), rgba(17, 27, 51, 0.8)), url("../img/fondo.gif") center / cover fixed;
+  background-color: var(--azul);
+}
+
+html { scroll-padding-top: 90px; }
+
+a { color: var(--amarillo); }
+a:hover { color: #fff; }
+
+/* Títulos */
+main h2 {
+  display: inline-block;
+  padding-bottom: 0.35rem;
+  border-bottom: 4px solid var(--amarillo);
+}
+
+/* Menú */
+.navbar-poke {
+  background-color: var(--azul-oscuro);
+  border-bottom: 4px solid var(--rojo);
+}
+
+.navbar-poke .nav-link:hover,
+.navbar-poke .nav-link.active {
+  color: var(--amarillo);
+}
+
+/* Pie de página */
+.footer-poke {
+  background-color: var(--azul-oscuro);
+  border-top: 4px solid var(--rojo);
+}
+
+/* Banner principal */
+.hero .lead { max-width: 34rem; }
+.hero-img { max-height: 280px; }
+
+/* Carrusel */
+.carousel-item img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: left;
+  background-color: var(--tarjeta);
+}
+
+/* Preguntas frecuentes (Chat)*/
+.accordion-poke {
+  --bs-accordion-bg: rgba(255, 255, 255, 0.85);
+  --bs-accordion-active-bg: var(--amarillo);
+  --bs-accordion-active-color: var(--azul);
+}
+
+/* Tienda */
+.tienda-main {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.presentacion {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Productos */
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.tarjeta {
+  background-color: var(--tarjeta);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.tarjeta img {
+  width: 170px;
+  height: 170px;
+  object-fit: contain;
+  background-color: #fff4d8;
+}
+
+.precio {
+  color: var(--amarillo);
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+/* Detalles del producto */
+.seccion {
+  background-color: var(--tarjeta);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.producto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.imagen {
+  background-color: #fff4d8;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.imagen img {
+  width: 100%;
+  max-height: 280px;
+  object-fit: contain;
+}
+
+.stock { color: #5fd38d; }
+
+/* Tarjetas de Bootstrap */
+.card {
+  --bs-card-bg: var(--tarjeta);
+  --bs-card-color: #fff;
+}
+
+.card-img-top { background-color: #fff4d8; }

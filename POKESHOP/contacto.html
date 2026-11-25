@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto y pedidos | PokéMerch</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-pokered sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">PokéMerch</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+            <li class="nav-item"><a class="nav-link" href="producto.html">Producto</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Cabecera de la página -->
+    <section class="page-hero text-center py-5">
+      <div class="container">
+        <h1 class="display-5 fw-bold">Contacto y pedidos</h1>
+        <p class="lead mb-0">¿Buscas un peluche, un sobre o un juego en concreto? Cuéntanos qué necesitas y te respondemos en 24 horas.</p>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-4">
+
+          <!-- Formulario -->
+          <div class="col-12 col-lg-8">
+            <div class="card shadow-sm border-0">
+              <div class="card-body p-4">
+                <h2 class="h4 mb-4">Formulario de pedido / consulta</h2>
+
+                <div id="mensaje-ok" class="alert alert-success d-none" role="alert">
+                  ¡Gracias! Hemos recibido tu solicitud y te contestaremos pronto.
+                </div>
+
+                <form id="form-contacto" class="needs-validation" novalidate>
+                  <div class="row g-3">
+
+                    <div class="col-md-6">
+                      <label for="nombre" class="form-label">Nombre y apellidos</label>
+                      <input type="text" class="form-control" id="nombre" name="nombre" minlength="3" placeholder="Ash Ketchum" required>
+                      <div class="invalid-feedback">Escribe tu nombre (mínimo 3 caracteres).</div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="email" class="form-label">Correo electrónico</label>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="ash@pallet.com" required>
+                      <div class="invalid-feedback">Introduce un correo válido.</div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="telefono" class="form-label">Teléfono <span class="text-muted">(opcional)</span></label>
+                      <input type="tel" class="form-control" id="telefono" name="telefono" pattern="[0-9]{9}" placeholder="600123456">
+                      <div class="invalid-feedback">Debe tener 9 dígitos.</div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="motivo" class="form-label">Motivo del mensaje</label>
+                      <select class="form-select" id="motivo" name="motivo" required>
+                        <option value="" selected disabled>Elige una opción</option>
+                        <option value="pedido">Quiero hacer un pedido</option>
+                        <option value="disponibilidad">Consultar disponibilidad</option>
+                        <option value="reserva">Reservar una caja de sobres</option>
+                        <option value="incidencia">Incidencia con un pedido</option>
+                        <option value="otro">Otro</option>
+                      </select>
+                      <div class="invalid-feedback">Selecciona un motivo.</div>
+                    </div>
+
+                    <!-- Tipo de producto -->
+                    <fieldset class="col-12">
+                      <legend class="form-label fs-6">Categoría principal</legend>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="categoria" id="cat-peluches" value="peluches" required>
+                        <label class="form-check-label" for="cat-peluches">Peluches</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="categoria" id="cat-cartas" value="cartas">
+                        <label class="form-check-label" for="cat-cartas">Cartas (sobres y cajas)</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="categoria" id="cat-juegos" value="videojuegos">
+                        <label class="form-check-label" for="cat-juegos">Videojuegos</label>
+                      </div>
+                    </fieldset>
+
+                    <div class="col-md-8">
+                      <label for="producto" class="form-label">Producto que buscas</label>
+                      <input type="text" class="form-control" id="producto" name="producto" placeholder="Ej.: Peluche de Pikachu 30 cm" required>
+                      <div class="invalid-feedback">Indica qué producto te interesa.</div>
+                    </div>
+
+                    <div class="col-md-4">
+                      <label for="cantidad" class="form-label">Cantidad</label>
+                      <input type="number" class="form-control" id="cantidad" name="cantidad" min="1" max="20" value="1" required>
+                      <div class="invalid-feedback">Entre 1 y 20 unidades.</div>
+                    </div>
+
+                    <!-- Envío -->
+                    <fieldset class="col-12">
+                      <legend class="form-label fs-6">Tipo de envío</legend>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="envio" id="envio-estandar" value="estandar" checked>
+                        <label class="form-check-label" for="envio-estandar">Estándar (3-5 días)</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="envio" id="envio-express" value="express">
+                        <label class="form-check-label" for="envio-express">Exprés (24-48 h)</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="envio" id="envio-recogida" value="recogida">
+                        <label class="form-check-label" for="envio-recogida">Recogida en tienda</label>
+                      </div>
+                    </fieldset>
+
+                    <div class="col-12">
+                      <label for="mensaje" class="form-label">Mensaje</label>
+                      <textarea class="form-control" id="mensaje" name="mensaje" rows="4" minlength="10" maxlength="500" placeholder="Cuéntanos los detalles: edición, idioma, estado de la carta, versión del juego..." required></textarea>
+                      <div class="invalid-feedback">Escribe al menos 10 caracteres.</div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="newsletter" name="newsletter">
+                        <label class="form-check-label" for="newsletter">Quiero recibir avisos de nuevos lanzamientos y reposiciones.</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="privacidad" name="privacidad" required>
+                        <label class="form-check-label" for="privacidad">Acepto la política de privacidad.</label>
+                        <div class="invalid-feedback">Debes aceptarla para enviar el formulario.</div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 d-flex flex-wrap gap-2">
+                      <button type="submit" class="btn btn-pokered btn-lg">Enviar solicitud</button>
+                      <button type="reset" class="btn btn-outline-secondary btn-lg">Borrar</button>
+                    </div>
+
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna lateral -->
+          <aside class="col-12 col-lg-4">
+            <div class="card shadow-sm border-0 mb-4">
+              <div class="card-body">
+                <h2 class="h5">Datos de contacto</h2>
+                <ul class="list-unstyled mb-0">
+                  <li class="mb-2"><strong>Email:</strong> <a href="mailto:campusfp@pokemerch.example">campusfp@pokemerch.example</a></li>
+                  <li class="mb-2"><strong>Teléfono:</strong> 900 123 456</li>
+                  <li class="mb-2"><strong>Horario:</strong> L-V de 10:00 a 19:00</li>
+                  <li><strong>Dirección:</strong> Calle Pueblo Paleta, 1</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card shadow-sm border-0">
+              <div class="card-body">
+                <h2 class="h5">Tarifas de envío</h2>
+                <div class="table-responsive">
+                  <table class="table table-sm align-middle mb-0">
+                    <thead>
+                      <tr><th scope="col">Envío</th><th scope="col">Plazo</th><th scope="col">Precio</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Estándar</td><td>3-5 días</td><td>3,95 €</td></tr>
+                      <tr><td>Exprés</td><td>24-48 h</td><td>6,95 €</td></tr>
+                      <tr><td>Recogida</td><td>Mismo día</td><td><span class="badge bg-success">Gratis</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Preguntas frecuentes -->
+    <section class="py-5 bg-soft" id="faq">
+      <div class="container">
+        <h2 class="h3 text-center mb-4">Preguntas frecuentes</h2>
+        <div class="accordion mx-auto" id="acordeon-faq">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">¿Los sobres y las cajas son oficiales?</button>
+            </h3>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#acordeon-faq">
+              <div class="accordion-body">Sí, todos los productos son oficiales y se envían sellados.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">¿Puedo reservar una novedad antes de que salga?</button>
+            </h3>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#acordeon-faq">
+              <div class="accordion-body">Sí. Elige «Reservar una caja de sobres» en el formulario y te avisaremos cuando llegue.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">¿Se pueden devolver los productos?</button>
+            </h3>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#acordeon-faq">
+              <div class="accordion-body">Tienes 14 días para devolver peluches y videojuegos sin abrir. Los sobres sellados también se pueden devolver si no se han abierto.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-pokedark text-light py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <p class="mb-0">&copy; 2026 PokéMerch · Proyecto educativo</p>
+      <ul class="nav">
+        <li class="nav-item"><a class="nav-link text-light" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link text-light" href="catalogo.html">Catálogo</a></li>
+        <li class="nav-item"><a class="nav-link text-light" href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Validación con Bootstrap y mensaje de confirmación (sin backend)
+    const form = document.getElementById('form-contacto');
+    const ok = document.getElementById('mensaje-ok');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        e.stopPropagation();
+        form.classList.add('was-validated');
+        return;
+      }
+      ok.classList.remove('d-none');
+      form.reset();
+      form.classList.remove('was-validated');
+      ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+
+    form.addEventListener('reset', function () {
+      form.classList.remove('was-validated');
+    });
+  </script>
+</body>
+</html>

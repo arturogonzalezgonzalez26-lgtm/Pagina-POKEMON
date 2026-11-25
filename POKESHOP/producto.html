@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<!-- Aquí pongo la configuración y los archivos que necesita la página. -->
+<head>
+    
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>POKESHOP | Productos</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <!-- Cargo los estilos de bootstrap para usar sus diseños. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="pagina-productos">
+  <!-- Esta parte contiene la cabecera de la página. -->
+  <header>
+    
+    <nav class="navbar navbar-expand-lg navbar-poke sticky-top" data-bs-theme="dark" aria-label="Navegación principal">
+      
+      <div class="container">
+        
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+
+          <img src="img/logo.svg" alt="" width="40" height="40">
+          <span>POKESHOP</span>
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir o cerrar el menú">
+          
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Aquí están los enlaces del menú de navegación. -->
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            
+            <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+            
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="producto.html">Producto</a></li>
+            
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+<main class="container py-4">
+    
+    <h1>Nuestros productos</h1>
+    <!-- Esta sección agrupa una parte del contenido de la página. -->
+    <section id="cartas" class="mb-5">
+      <!-- Este es el título de esta sección. -->
+      <h2 class="mb-3">Cartas</h2>
+      
+      <div class="row g-4">
+        
+        <div class="col-12 col-sm-6 col-lg-4">
+          
+          <article class="card h-100">
+            
+            <div class="ratio ratio-1x1">
+              
+              <img src="img/cartapika.jpg" class="card-img-top object-fit-contain" alt="Carta holográfica Pikachu">
+            </div>
+            
+            <div class="card-body">
+              <span class="badge text-bg-warning">Holográfica</span>
+              
+              <h3 class="card-title h5 mt-2">Carta holográfica Pikachu</h3>
+              
+              <p class="card-text fw-bold">34,90 €</p>
+              <!-- Este enlace permite ir a otra página o sección. -->
+              <a href="cartas.html" class="btn btn-danger">Ver detalles</a>
+            </div>
+          </article>
+        </div>
+        
+        <div class="col-12 col-sm-6 col-lg-4">
+          
+          <article class="card h-100">
+            
+            <div class="ratio ratio-1x1">
+              
+              <img src="img/lote50.jpg" class="card-img-top object-fit-contain" alt="Lote de 50 cartas variadas">
+            </div>
+            
+            <div class="card-body">
+              <span class="badge text-bg-warning">Oferta</span>
+              
+              <h3 class="card-title h5 mt-2">Lote de 50 cartas variadas</h3>
+              
+              <p class="card-text fw-bold">12,50 €</p>
+              <!-- Este enlace permite ir a otra página o sección. -->
+              <a href="cartas.html" class="btn btn-danger">Ver detalles</a>
+            </div>
+          </article>
+        </div>
+        
+        <div class="col-12 col-sm-6 col-lg-4">
+          
+          <article class="card h-100">
+            
+            <div class="ratio ratio-1x1">
+              
+              <img src="img/charizard.jpg" class="card-img-top object-fit-contain" alt="Carta Charizard ex foil">
+            </div>
+            
+            <div class="card-body">
+              <span class="badge text-bg-warning">Estrella</span>
+              
+              <h3 class="card-title h5 mt-2">Carta Charizard ex foil</h3>
+              
+              <p class="card-text fw-bold">59,90 €</p>
+              <!-- Este enlace permite ir a otra página o sección. -->
+              <a href="cartas.html" class="btn btn-danger">Ver detalles</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- Esta sección agrupa una parte del contenido de la página. -->
+    <section id="sobres" class="mb-5">
+      <!-- Este es el título de esta sección. -->
+      <h2 class="mb-3">Sobres y cajas de sobres</h2>
+      
+      <div class="row g-4">
+        
+        <div class="col-12 col-sm-6 col-lg-4">
+          
+          <article class="card h-100">
+            
+            <div class="ratio ratio-1x1">
+              
+              <img src="img/sobre.jpg" class="card-img-top object-fit-contain" alt="Sobre individual">
+            </div>
+            
+            <div class="card-body">
+              <span class="badge text-bg-warning">Novedad</span>
+              
+              <h3 class="card-title h5 mt-2">Sobre individual</h3>
+              
+              <p class="card-text fw-bold">4,90 €</p>
+              <!-- Este enlace permite ir a otra página o sección. -->
+              <a href="cajas.html" class="btn btn-danger">Ver detalles</a>
+            </div>
+          </article>
+        </div>
+        
+        <div class="col-12 col-sm-6 col-lg-4">
+          
+          <article class="card h-100">
+            
+            <div class="ratio ratio-1x1">
+              
+              <img src="img/pack3.jpg" class="card-img-top object-fit-contain" alt="Pack de 3 sobres">
+            </div>
+            
+            <div class="card-body">
+              <span class="badge text-bg-warning">Pack</span>
+              
+              <h3 class="card-title h5 mt-2">Pack de 3 sobres</h3>
+              
+              <p class="card-text fw-bold">13,90 €</p>
+              <!-- Este enlace permite ir a otra página o sección. -->
+              <a href="cajas.html" class="btn btn-danger">Ver detalles</a>
+            </div>
+          </article>
+        </div>
+        
+        <div class="col-12 col-sm-6 col-lg-4">
+          
+          <article class="card h-100">
+            
+            <div class="ratio ratio-1x1">
+              
+              <img src="img/display36.jpg" class="card-img-top object-fit-contain" alt="Display de 36 sobres">
+            </div>
+            
+            <div class="card-body">
+              <span class="badge text-bg-warning">Limitada</span>
+              
+              <h3 class="card-title h5 mt-2">Display de 36 sobres</h3>
+              
+              <p class="card-text fw-bold">139,00 €</p>
+              <!-- Este enlace permite ir a otra página o sección. -->
+              <a href="cajas.html" class="btn btn-danger">Ver detalles</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- Esta sección agrupa una parte del contenido de la página. -->
+    <section id="peluches" class="mb-5">
+      <!-- Este es el título de esta sección. -->
+      <h2 class="mb-3">Peluches</h2>
+      
+      <div class="row g-4">
+        
+        <div class="col-12 col-sm-6 col-lg-4">
+          
+          <article class="card h-100">
+            
+            <div class="ratio ratio-1x1">
+              
+              <img src="img/peluchepika.jpg" class="card-img-top object-fit-contain" alt="Peluche Pikachu 30 cm">
+            </div>
+            
+            <div class="card-body">
+              <span class="badge text-bg-warning">Más vendido</span>
+              
+              <h3 class="card-title h5 mt-2">Peluche Pikachu 30 cm</h3>
+              
+              <p class="card-text fw-bold">24,95 €</p>
+              <!-- Este enlace permite ir a otra página o sección. -->
+              <a href="peluches.html" class="btn btn-danger">Ver detalles</a>
+            </div>
+          </article>
+        </div>
+        
+        <div class="col-12 col-sm-6 col-lg-4">
+          
+          <article class="card h-100">
+            
+            <div class="ratio ratio-1x1">
+              
+              <img src="img/pelucheeve.jpg" class="card-img-top object-fit-contain" alt="Peluche Eevee 25 cm">
+            </div>
+            
+            <div class="card-body">
+              <span class="badge text-bg-warning">Novedad</span>
+              
+              <h3 class="card-title h5 mt-2">Peluche Eevee 25 cm</h3>
+              
+              <p class="card-text fw-bold">21,90 €</p>
+              <!-- Este enlace permite ir a otra página o sección. -->
+              <a href="peluches.html" class="btn btn-danger">Ver detalles</a>
+            </div>
+          </article>
+        </div>
+        
+        <div class="col-12 col-sm-6 col-lg-4">
+          
+          <article class="card h-100">
+            
+            <div class="ratio ratio-1x1">
+              
+              <img src="img/snorlax-peluche-gigante-frente.jpg" class="card-img-top object-fit-contain" alt="Peluche Snorlax 60 cm">
+            </div>
+            
+            <div class="card-body">
+              <span class="badge text-bg-warning">Oferta</span>
+              
+              <h3 class="card-title h5 mt-2">Peluche Snorlax 60 cm</h3>
+              
+              <p class="card-text fw-bold">49,90 €</p>
+              <!-- Este enlace permite ir a otra página o sección. -->
+              <a href="peluches.html" class="btn btn-danger">Ver detalles</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- Esta sección agrupa una parte del contenido de la página. -->
+    <section id="juegos" class="mb-5">
+      <!-- Este es el título de esta sección. -->
+      <h2 class="mb-3">Videojuegos</h2>
+      
+      <div class="row g-4">
+        
+        <div class="col-12 col-sm-6 col-lg-4">
+          
+          <article class="card h-100">
+            
+            <div class="ratio ratio-1x1">
+              
+              <img src="img/videojuego1.jpg">
+            </div>
+            
+            <div class="card-body">
+              <span class="badge text-bg-secondary">Nintendo Switch</span>
+              
+              <h3 class="card-title h5 mt-2">Pokémon Escarlata</h3>
+              
+              <p class="card-text fw-bold">49,95 €</p>
+              <!-- Este enlace permite ir a otra página o sección. -->
+              <a href="videojuegos.html" class="btn btn-danger">Ver detalles</a>
+            </div>
+          </article>
+        </div>
+        
+        <div class="col-12 col-sm-6 col-lg-4">
+          
+          <article class="card h-100">
+            
+            <div class="ratio ratio-1x1">
+              
+              <img src="img/pokeoro.jpg">
+            </div>
+            
+            <div class="card-body">
+              <span class="badge text-bg-secondary">Nintendo DS</span>
+              
+              <h3 class="card-title h5 mt-2">Pokémon Oro HeartGold</h3>
+              
+              <p class="card-text fw-bold">89,00 €</p>
+              <!-- Este enlace permite ir a otra página o sección. -->
+              <a href="videojuegos.html" class="btn btn-danger">Ver detalles</a>
+            </div>
+          </article>
+        </div>
+        
+        <div class="col-12 col-sm-6 col-lg-4">
+          
+          <article class="card h-100">
+            
+            <div class="ratio ratio-1x1">
+              
+              <img src="img/pokerubi.jpg">
+            </div>
+            
+            <div class="card-body">
+              <span class="badge text-bg-secondary">Nintendo 3DS</span>
+              
+              <h3 class="card-title h5 mt-2">Pokémon Rubí Omega</h3>
+              
+              <p class="card-text fw-bold">44,90 €</p>
+              <!-- Este enlace permite ir a otra página o sección. -->
+              <a href="videojuegos.html" class="btn btn-danger">Ver detalles</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-poke pt-5 pb-3">
+    
+    <div class="container">
+      
+      <p class="mb-0">&copy; POKESHOP</p>
+    </div>
+  </footer>
+
+  <!-- Cargo javascript de bootstrap para que funcionen sus elementos interactivos. -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
